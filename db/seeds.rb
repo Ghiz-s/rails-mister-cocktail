@@ -9,6 +9,10 @@ drinks_serialized = open(url).read
 ingredients = JSON.parse(drinks_serialized)
 
 ingredients["drinks"].each do |data|
-  new_ingredient = Ingredient.new(name: data["strIngredient1"])
+  new_ingredient = Ingredient.new(name: data["strIngredient1"].capitalize)
   new_ingredient.save!
 end
+
+Ingredient.create(name: "Ingwerer")
+Ingredient.create(name: "Ginger beer")
+Ingredient.create(name: "Fresh mint")
