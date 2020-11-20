@@ -13,6 +13,9 @@ ingredients["drinks"].each do |data|
   new_ingredient.save!
 end
 
-Ingredient.create(name: "Ingwerer")
-Ingredient.create(name: "Ginger beer")
-Ingredient.create(name: "Fresh mint")
+ingwerer = Ingredient.new(name: "Ingwerer")
+ingwerer.save!
+ginger_beer = Ingredient.new(name: "Ginger beer")
+ginger_beer.save!
+fresh_mint = Ingredient.new(name: "Fresh mint")
+fresh_mint.save!
